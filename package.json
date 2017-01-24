@@ -22,6 +22,7 @@
     "jamen"
   ],
   "dependencies": {
-    "async-each": "^1.0.1"
+    "async-each": "^1.0.1",
+    "once": "^1.4.0"
   }
 }

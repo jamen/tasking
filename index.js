@@ -1,4 +1,5 @@
 var each = require('async-each')
+var once = require('once')
 function loud (err) { if (err) throw err }
 
 module.exports = tasking
@@ -22,7 +23,7 @@ function add (system, name, deps, fn) {
 }
 
 function run (system, name, done, ran) {
-  done = done || loud
+  done = once(done || loud)
   ran = ran || {}
 
   if (Array.isArray(name)) {
